@@ -66,7 +66,7 @@ if isstr([eeg.event.type])
     event_temp = {eeg.event.type};
     event_temp = erase(event_temp,'condition ');
     for i =1 : length(event_temp)
-        event(i) = str2num(event_temp(i));
+        event(i) = str2num(event_temp{i});
     end
     latency = [eeg.event.latency];
 else
